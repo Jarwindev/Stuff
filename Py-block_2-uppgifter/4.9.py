@@ -1,4 +1,4 @@
-n = int(input("Number of rows? "))
+n = int(input("Radantal? "))
 for i in range(n, 0, -1):
     for j in range(1, i + 1):
         print("+", end=" ")
