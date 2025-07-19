@@ -2,6 +2,10 @@
 # i samma fil för att är mer effektivt.
 # Använder en ordbok för att lagra Morse-koden och dess motsvarande tecken. 
 
+
+# Funktion för att hantera översättning mellan Morse-kod och klartext.
+# Använder en ordbok för att lagra Morse-koden och dess motsvarande tecken.
+
 def main():
     morse_alfa = {
         "A": ".-", "B": "-...", "C": "-.-.", "D": "-..", "E": ".", 
@@ -13,7 +17,17 @@ def main():
         "0": "-----", "1": ".----", "2": "..---", "3": "...--", "4": "....-", 
         "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----.",
     }
-    morse_to_text = {v: k for k, v in morse_alfa.items()}
+
+    # Inverterar ordboken för att kunna översätta från Morse-kod till klartext.
+    # Nycklar blir värden och värden blir nycklar.
+
+    morse_to_text = {v: n for n, v in morse_alfa.items()}
+
+    # Användargränssnitt för att välja översättningstyp.
+    # Tar in ett val från användaren för att bestämma om de vill översätta till Morse-kod eller klartext.
+    # Om användaren väljer 1, tar den in en textsträng och översätter den till Morse-kod.
+    # Om användaren väljer 2, tar den in en Morse-kod och översätter den till klartext.
+    # Om användaren väljer något annat, skriver den ut ett felmeddelande.
 
     val = input("1. Översätt till Morse-kod\n2. Översätt till Klartext\nVälj: ")
     if val == "1":
@@ -26,6 +40,8 @@ def main():
         print("Klartext:", text)
     else:
         print("Ogiltigt val, vänligen välj 1 eller 2.")
+
+# Anropar huvudfunktionen för att starta programmet.
 
 if __name__ == "__main__":
     main()
