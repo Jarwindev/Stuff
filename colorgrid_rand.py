@@ -198,7 +198,7 @@ class ColorGridApp:
 
     def generate_colors(self):
         if not self.root_color_constraints:
-            tk.messagebox.showwarning("No Root Colors", "Please add at least one root color before generating the grid.")  
+            tk.messagebox.showwarning("No Root Colors", "Please add at least one root color before trying to generate the grid.")  
             self.colors = []
             return
         
@@ -210,7 +210,7 @@ class ColorGridApp:
                 color = self.generate_constrained_color(rgb, dist)
                 row.append(color)
             self.colors.append(row)
-        print(f"Generated color grid of size {self.rows}x{self.cols}")
+        print(f"Generated a color grid of size {self.rows}x{self.cols}")
 
     def draw_grid(self):
         if not self.colors or len(self.colors) != self.rows or len(self.colors[0]) != self.cols:
