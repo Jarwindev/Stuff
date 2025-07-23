@@ -23,7 +23,7 @@ for element in Lista:
             print("Listan och tuplen är inte lika")
             break
 
-# Om alla element i listan matchar tuplen, skrivs det ut att de är lika.
+# Om alla element i listan matchar tuplen, och om de har samma längd, skrivs det ut att de är lika.
 
 if j == len(Tuple):
     print("Listan och tuplen är lika")
