@@ -40,6 +40,5 @@ def main():
         print("Ogiltigt val, vänligen välj 1 eller 2.")
 
 # Anropar huvudfunktionen för att starta programmet.
-
 if __name__ == "__main__":
     main()
