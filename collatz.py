@@ -3,7 +3,6 @@ def main():
     journey = collatz(integer)
     print(journey)
 
-
 def collatz(number):
     if not isinstance(number, int) or number <= 0:
         raise ValueError("number must be a positive integer")
@@ -18,7 +17,5 @@ def collatz(number):
 
     return journey
 
-
 if __name__ == "__main__":
     main()
-
